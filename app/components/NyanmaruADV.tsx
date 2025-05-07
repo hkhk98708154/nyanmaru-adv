@@ -21,7 +21,7 @@ export default function NyanmaruADV() {
   };
 
   return (
-    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: 'url(/background.jpg)' }} onClick={nextDialogue}>
+    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: 'url(/background.png)' }} onClick={nextDialogue}>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3 max-w-xs">
         <Image src="/nyanmaru.png" alt="にゃんまちゃん" width={400} height={400} className="w-full h-auto" />
       </div>
