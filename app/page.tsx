@@ -1,8 +1,9 @@
-import Image from "next/image";
-import NyanmaruADV from './components/NyanmaruADV';
+// app/page.tsx
+import NyanmaruADV from "@/app/components/NyanmaruADV";
 
 export default function Home() {
   return <NyanmaruADV />;
 }
+
 
 
