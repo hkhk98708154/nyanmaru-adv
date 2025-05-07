@@ -1,7 +1,5 @@
-"use client";
-
-import Image from "next/image";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const dialogues = [
   "やっほー！にゃんまちゃんやで！にゃんまるコインのせつめいを したるから、ちゃんと きいてや〜！にしし！",
@@ -21,13 +19,12 @@ export default function NyanmaruADV() {
   };
 
   return (
-    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: 'url(/background.png)' }} onClick={nextDialogue}>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3 max-w-xs">
-        <Image src="/nyanmaru.png" alt="にゃんまちゃん" width={400} height={400} className="w-full h-auto" />
+    <div className="min-h-screen flex flex-col items-center justify-end p-4 bg-cover bg-center" style={{ backgroundImage: "url('/background.png')", backgroundSize: "cover" }}>
+      <img src="/nyanmaru.png" alt="にゃんまちゃん" className="w-2/3 max-w-sm mb-4" />
+      <div className="bg-white text-gray-900 w-full max-w-2xl p-4 rounded-2xl shadow-md mb-4 border-2 border-gray-300">
+        <p className="text-lg font-bold leading-relaxed">{dialogues[index]}</p>
       </div>
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-xl bg-black bg-opacity-75 rounded-xl p-4 text-white text-lg">
-        <p>{dialogues[index]}</p>
-      </div>
+      <Button onClick={nextDialogue} className="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600 mb-4">つぎへ ➡️</Button>
     </div>
   );
 }
